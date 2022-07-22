@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FirebaseDemo.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="SeaGreen" Padding="40" CornerRadius="50">
+            <Label Text="Welcome Theo!" HorizontalTextAlignment="Center" TextColor="Black" FontSize="36"/>
+        </Frame>
+        <Label Text="Employees Xamarin" FontSize="Title" Padding="150,50,30,50"/>
+        <Button Text="Add Employee" x:Name="addEmployee" Clicked="addEmployee_Clicked" BackgroundColor="SteelBlue" Padding="20,10,10,10" CornerRadius="100"/>
+
+
+        <Button Text="Show Employee" x:Name="showEmployee" Clicked="showEmployee_Clicked" BackgroundColor="DarkGreen" CornerRadius="100"/>
+        
+    </StackLayout>
+
+</ContentPage>

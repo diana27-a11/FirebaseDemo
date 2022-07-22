@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FirebaseDemo.Views.ListEmployee">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="Green" Padding="8" CornerRadius="0">
+                <Label Text="App Music..." HorizontalTextAlignment="Center" TextColor="White" FontSize="20"/>
+            </Frame>
+            <CollectionView ItemsSource="{Binding EmployeeModel}"
+                            SelectionMode="Single"
+                            SelectionChanged="OnSelectionChanged">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10"
+                                  RowDefinitions="Auto"
+                                  ColumnDefinitions="Auto, *">
+
+                            <Image Grid.RowSpan="2"
+                                       Source="{Binding FirstName}"
+                                       Aspect="AspectFill"
+                                       HeightRequest="60"
+                                       WidthRequest="60"/>
+                            <Label Grid.Row="0"
+                                       Grid.Column="1"
+                                       TextColor="#1FC44F"
+                                       FontSize="Medium"
+                                       Text="{Binding LastName}"/>
+                            <Label Grid.Row="1"
+                                       Grid.Column="1"
+                                       Text="{Binding Email}"/>
+
+
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
